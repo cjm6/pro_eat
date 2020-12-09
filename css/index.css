@@ -1,0 +1,268 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/* 导航条 */
+#nav{
+	width: 1200px;
+	height: 120px;
+	margin: 0 auto;
+	background-color: #fbfbfb;
+}
+.logo{
+	width: 152px;
+	margin-left: 40px;
+	float: left;
+}
+.menu>ul{
+	width: 640px;
+	height: 120px;
+	float: left;
+	margin-left: 330px;
+}
+.menu>ul>li{
+	width: 128px;
+	float: left;
+	line-height: 120px;
+	text-align: center;
+}
+.menu>ul>li>a{
+	color: #000000;
+	font-size: 20px;
+}
+.menu>ul>li>a:hover{
+	color: #f1602c;
+	text-decoration: none;
+}
+/* 轮播图 */
+#slideshow{
+	width: 1200px;
+	height: 400px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.slide-img{
+	width: 6000px;
+	height: 400px;
+	position: absolute;
+}
+.slide-img img{
+	width: 1200px;
+	height: 400px;
+	float: left;
+}
+.dot{
+	width: 200px;
+	position: absolute;
+	bottom: 10px;
+	right: 50px;
+}
+.dot span{
+	width: 20px;
+	height: 20px;
+	background-color: #C0C0C0;
+	border-radius: 50%;
+	border: 2px #FFFFFF solid;
+	display: inline-block;
+	cursor:pointer;
+}
+.dot .on{
+	background-color: #FFFFFF;
+	border-color: #f1602c;
+}
+.slide-btn a{
+	width: 100px;
+	height: 400px;
+	line-height: 400px;
+	background-color: #CCCCCC;
+	opacity: 0.7;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 48px;
+	font-weight: 800;
+	position: absolute;
+}
+.slide-btn a:hover{
+	background-color: #7B7D80;
+}
+.btn-left{
+	left: 0;
+}
+.btn-right{
+	right: 0;
+}
+/* 新品推荐模块 */
+#recommend{
+	width: 1200px;
+	height: 500px;
+	margin: 0 auto;
+}
+#recommend p{
+	width: 125px;
+	font-size: 28px;
+	text-align: center;
+	margin: 0 auto;
+	border-bottom: 3px #f1602c solid;
+}
+#recommend>div{
+	float: left;
+}
+.recommend1,.recommend4{
+	width: 230px;
+	height: 400px;
+}
+.recommend2,.recommend3,.recommend5,.recommend6{
+	width: 230px;
+	height: 180px;
+}
+.recommend1,.recommend2,.recommend4,.recommend5,.recommend6{
+	margin-top: 35px;
+	margin-left: 56px;
+}
+.recommend3{
+	margin-top: 255px;
+	margin-left: -230px;
+}
+/* 美食达人摆盘模块 */
+#photo{
+	width: 1200px;
+	height: 750px;
+	margin: 0 auto;
+}
+#photo .ti{
+	width: 775px;
+	height: 40px;
+	color: #444444;
+	font-size: 30px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.tab ul{
+	width: 620px;
+	height: 40px;
+	margin-top: 30px;
+	margin-left: 30px;
+}
+.tab ul li{
+	width: 150px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 20px;
+	float: left;
+	border-bottom: 3px #f5f5f4 solid;
+}
+.tab ul li.active{
+	border-color: #f9b750;
+	color: #f9b750;
+}
+#photo .intro .select{
+	width: 1100px;
+	height: 575px;
+	margin: 20px 70px 0px 30px;
+	background-color: #f5f5f4;
+}
+#photo .intro .select p{
+	width: 1020px;
+	font-size: 20px;
+	margin: 0 auto;
+}
+#photo .intro .select img{
+	margin-top: 65px;
+	margin-left: 50px;
+}
+.first,.second,.third,.fourth{
+	width: 1100px;
+	height: 575px;
+	margin: 20px 70px 0px 30px;
+	background-color: #f5f5f4;
+}
+#photo .intro .first p{
+	width: 1020px;
+	font-size: 20px;
+	margin: 0 auto;
+}
+#photo .intro .first img{
+	margin-top: 65px;
+	margin-left: 50px;
+}
+#photo .intro .second p{
+	width: 1020px;
+	font-size: 20px;
+	margin: 0 auto;
+}
+#photo .intro .second img{
+	margin-top: 65px;
+	margin-left: 50px;
+}
+#photo .intro .third p{
+	width: 1020px;
+	font-size: 20px;
+	margin: 0 auto;
+}
+#photo .intro .third img{
+	margin-top: 65px;
+	margin-left: 50px;
+}
+#photo .intro .fourth p{
+	width: 1020px;
+	font-size: 20px;
+	margin: 0 auto;
+}
+#photo .intro .fourth img{
+	margin-top: 65px;
+	margin-left: 50px;
+}
+#photo .intro div{
+	display: none;
+}
+#photo .intro div.select{
+	display: block;
+}
+/* 回到顶部 */
+#to-top .top{
+	position:fixed;
+	top:450px;
+	right:0px;
+	z-index: 3;
+}
+#to-top .top a img{
+	width:80px;
+	height:80px;
+}
+#to-top .top a:hover{
+	opacity: 0.6;
+}
+/* 页脚 */
+#footer{
+	width: 1200px;
+	height: 230px;
+	margin: 0 auto;
+	background-color: #1b1b1b;
+}
+.webtitle{
+	width: 235px;
+	height: 35px;
+	color: #f27507;
+	font-size: 22px;
+	margin: 0 auto;
+}
+#footer .mess{
+	width: 580px;
+	color: white;
+	font-size: 19px;
+	margin-left: 225px;
+}
+.left-img{
+	width: 140px;
+	float: left;
+}

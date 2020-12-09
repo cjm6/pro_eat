@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+		<link rel="stylesheet" href="css/contribute.css">
+    </head>
+	<script src="jquery-3.4.1.js"></script>
+	<script src="js/contribute.js"></script>
+    <body>
+		<div id="contribute">
+			<div id="nav">
+				<div class="logo">
+					<img src="image/logo.gif">
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href="index.html">首页</a></li>
+						<li><a href="list.html">觅食菜单</a></li>
+						<li><a href="team.html">我们的团队</a></li>
+						<li><a href="about us.html">关于我们</a></li>
+						<li><a href="contribute.html">欢迎投稿</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div id="slideshow">
+				<div class="slide-img">
+					<img src="image/slideshow1.gif">
+					<img src="image/slideshow2.gif">
+					<img src="image/slideshow3.gif">
+					<img src="image/slideshow4.gif">
+					<img src="image/slideshow5.gif">
+				</div>
+				<div class="dot">
+					<span index="1" class="on"></span>
+					<span index="2"></span>
+					<span index="3"></span>
+					<span index="4"></span>
+					<span index="5"></span>
+				</div>
+				<div class="slide-btn">
+					<a href="#" class="btn-left slide-btn1"><</a>
+					<a href="#" class="btn-right slide-btn1">></a>
+				</div>
+			</div>
+			<script src="jquery-3.4.1.js"></script>
+			<script>
+				var imgcount=5
+				var index=1
+				var time
+				var but=$(".dot")[0].children
+				autoNextPage()
+				function autoNextPage(){
+					time=setInterval(function(){
+						nextPage(true)
+					},3000)
+				}
+				$("#slideshow").mouseover(function(){
+					clearInterval(time)
+				})
+				$("#slideshow").mouseout(function(){
+					autoNextPage()
+				})
+				$(".btn-left").click(function(){
+					nextPage(false)
+				})
+				$(".btn-right").click(function(){
+					nextPage(true)
+				})
+				clickButtons()
+				function clickButtons(){
+					var length=but.length
+					for(var i=0;i<length;i++){
+						but[i].onclick=function(){
+							$(but[index-1]).removeClass("on")
+							if($(this).attr("index")==1){
+								index=5
+							}else{
+								index=$(this).attr("index")-1
+							}
+							nextPage(true)
+						}
+					}
+				}
+				function nextPage(next){
+					var targetLeft=0
+					$(but[index-1]).removeClass("on")
+					if(next){
+						if(index==5){
+							targetLeft=0
+							index=1
+						}else{
+							index++
+							targetLeft=-1200*(index-1)
+						}
+					}else{
+						if(index==1){
+							index=5
+							targetLeft=-1200*(imgcount-1)
+						}else{
+							index--
+							targetLeft=-1200*(index-1)
+						}
+					}
+					$(".slide-img").animate({left:targetLeft+'px'})
+					$(but[index-1]).addClass("on")
+				}
+			</script>
+			
+			<div id="case">
+				<div id="case-left">
+					<h1>我们欢迎您的来稿</h1>
+					<div class="first">
+						<h3>文案<span>↓</span></h3>
+						<ul>
+							<li>摆盘文案</li>
+							<li>拍照文案</li>
+							<li>制作文案</li>
+						</ul>
+					</div>
+					<div>
+						<h3>美食推荐<span>→</span></h3>
+						<ul>
+							<li>中西式</li>
+							<li>正餐</li>
+							<li>甜点</li>
+						</ul>
+					</div>
+					<div>
+						<h3>建议<span>→</span></h3>
+						<ul>
+							<li>对服务</li>
+							<li>对内容</li>
+							<li>对菜色</li>
+						</ul>
+					</div>
+				</div>
+				<div id="case-right">
+					<form action="success.html" name="myform" method="get" class="myform" id="myform">
+						<div>
+							<span>name</span>
+							<input type="text" id="name">
+						</div>
+						<div>
+							<span>tel</span>
+							<input type="password" id="tel">
+						</div>
+						<input type="file" name="" size="15" input enctype="multipart/form-data“ maxlength="100">
+						<h3><input type="submit" id="btn" value="提交"></h3>
+					</form>
+				</div>
+			</div>
+			
+			<div id="evaluate">
+				<p class="eval-title">致广大网民朋友的一封信</p>
+				<br/>
+				<p>尊敬的广大网民朋友：</p>
+				<br/>
+				<p class="retract">大家好！</p>
+				<p class="retract">我是"吃食网"网站的设计及开发者，自吃食网网站发布以来，广大网民朋友纷纷支持我们网站！看得出，这是大家对我们网站的支持和赞同！在此，我们占用网页的一部分资源，向广大网民朋友致以衷心的感谢！</p>
+				<p class="retract">同时，吃食网初步设计及开发也在此告一段落，在此，我们诚请广大网民朋友点击下方评价按钮，给我们网站一些意见或者建议！我们也会根据广大网民朋友的反馈进行相应改进</p>
+				<p class="retract">最后，衷心祝愿广大网民朋友周末愉快、天天开心！</p>
+				<p class="eval-right1">吃食网</p>
+				<p class="eval-right2">2020年6月3日</p>
+				<p class="eval-btn">
+					<a class="eval-btn1" href="grade.html" role="button"><b>评价</b></a>
+				</p>
+			</div>
+			
+			<div id="to-top">
+				<ul class="top">
+					<a href="#">
+						<img src="image/top.png">
+					</a>
+				</ul>
+			</div>
+			
+			<div id="footer">
+				<br/>
+				<br/>
+				<div class="left-img">
+					<img src="image/foot-left.gif">
+				</div>
+				<p class="webtitle"><b>吃食网 — 让吃更美！</b></p>
+				<p class="mess">关于我们 - 联系我们 - 加入我们 - 免责声明 - 我要投稿 - 访客留言</p>
+				<p class="mess">本站提供热销新品、菜品摆盘，别忘了告诉您的朋友哟 ^_^</p>
+				<p class="mess">版权所有 &copy; 2004-2020 吃食网 保留所有权利</p>
+			</div>
+		</div>
+    </body>
+</html>

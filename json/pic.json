@@ -1,0 +1,20 @@
+{
+    "start": 0,
+    "pic": [
+        {
+            "img-1": "menu-01.gif"
+        },
+        {
+            "img-2": "image/menu-02.gif"
+        },
+        {
+            "img-3": "image/menu-03.gif"
+        },
+        {
+            "img-4": "image/menu-04.gif"
+        },
+        {
+            "img-5": "image/menu-05.gif"
+        }
+    ]
+}

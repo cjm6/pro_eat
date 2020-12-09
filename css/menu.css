@@ -1,0 +1,156 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/* 导航条 */
+#nav{
+	width: 1200px;
+	height: 120px;
+	margin: 0 auto;
+	background-color: #fbfbfb;
+}
+.logo{
+	width: 152px;
+	margin-left: 40px;
+	float: left;
+}
+.menu>ul{
+	width: 640px;
+	height: 120px;
+	float: left;
+	margin-left: 330px;
+}
+.menu>ul>li{
+	width: 128px;
+	float: left;
+	line-height: 120px;
+	text-align: center;
+}
+.menu>ul>li>a{
+	color: #000000;
+	font-size: 20px;
+}
+.menu>ul>li>a:hover{
+	color: #f1602c;
+	text-decoration: none;
+}
+/* 鼠标经过出现遮罩层 */
+#cartoon{
+	width: 1200px;
+	height: 500px;
+	margin: 0 auto;
+	padding-bottom: 30px;
+}
+.car{
+	position: relative;
+}
+.car img{
+	width: 100%;
+	display: block;
+}
+.car .car-word{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(44, 44, 44, 0.6);
+    opacity: 0.6;
+	font-size: 2px;
+	color: #286090;
+}
+.car:hover .car-word{
+    opacity: 1;
+}
+.car:hover .car-word h2{
+	font-size: 32px;
+	margin-top: 200px;
+    text-align: center;
+    color: white;
+}
+.car:hover .car-word p{
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 18px;
+}
+/* 动漫美食 */
+#car-photo{
+	width: 1200px;
+	height: 1300px;
+	margin: 0 auto;
+	border: 3px #f5f5f4 solid;
+}
+.photo1,.photo2,.photo3,.photo4{
+	width: 500px;
+	float: left;
+}
+.photo1{
+	margin-top: 50px;
+	margin-left: 50px;
+}
+.photo2{
+	margin-top: 160px;
+	margin-left: 50px;
+}
+.photo3{
+	margin-top: 50px;
+	margin-left: 50px;
+}
+.photo3 img{
+	width: 500px;
+}
+.photo4{
+	margin-top: 120px;
+	margin-left: 50px;
+}
+#car-photo div p{
+	width: 450px;
+	margin: 0 auto;
+	font-size: 20px;
+	text-indent: 2em;
+}
+/* 回到顶部 */
+#to-top .top{
+	position:fixed;
+	top:450px;
+	right:0px;
+	z-index: 3;
+}
+#to-top .top a img{
+	width:80px;
+	height:80px;
+}
+#to-top .top a:hover{
+	opacity: 0.6;
+}
+/* 页脚 */
+#footer{
+	width: 1200px;
+	height: 230px;
+	margin: 0 auto;
+	background-color: #1b1b1b;
+}
+.webtitle{
+	width: 235px;
+	height: 35px;
+	color: #f27507;
+	font-size: 22px;
+	margin: 0 auto;
+}
+#footer .mess{
+	width: 580px;
+	color: white;
+	font-size: 19px;
+	margin-left: 225px;
+}
+.left-img{
+	width: 140px;
+	float: left;
+}

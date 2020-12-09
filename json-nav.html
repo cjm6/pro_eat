@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		li{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		/* 导航条 */
+		#nav{
+			width: 1200px;
+			height: 150px;
+			margin: 0 auto;
+			background-color: #fbfbfb;
+			border: 1px black solid;
+		}
+		.logo{
+			width: 152px;
+			margin-left: 40px;
+			float: left;
+		}
+		.menu .navbar{
+			width: 650px;
+			margin-left: 400px;
+		}
+		.menu .navbar li{
+			width: 130px;
+			line-height: 120px;
+			text-align: center;
+			float: left;
+		}
+		.menu .navbar li a{
+			line-height: 120px;
+			display: block;
+			color: #000000;
+			font-size: 20px;
+			color: yellowgreen;
+		}
+		.menu .navbar li a:hover{
+			color: #f1602c;
+		}
+		.menu ul li ul{
+			display: none;position: absolute;
+		}
+		.menu ul li ul li{
+			line-height: 30px;
+		}
+	</style>
+	<script src="jquery-3.4.1.js"></script>
+	<script>
+		// $(function() {
+		// 	$(".menu>ul>li").mouseenter(function() {
+		// 		$(this).children("ul").stop(true, true).show("slow")
+		// 	})
+		// 	$(".menu>ul>li").mouseleave(function() {
+		// 		$(this).children("ul").stop(true, true).hide()
+		// 	})
+		// })
+		$(document).ready(function(){
+				$(".menu>ul>li").mouseenter(function(){
+							$(this).children("ul").stop(true,true).show("3000")
+						})
+						$(".menu>ul>li").mouseleave(function(){
+							$(this).children("ul").stop(true,true).hide()
+						})
+		})
+	</script>
+	<body>
+		<div id="nav">
+			<div class="logo">
+				<img src="image/logo.gif">
+			</div>
+			<div class="menu">
+				<ul class="navbar">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="list.html">觅食菜单</a></li>
+					<li>
+						<a href="team.html">我们的团队</a>
+						<ul>
+							<li><a href="about us.html">团队成员</a></li>
+							<li><a href="about us.html">团队介绍</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="about us.html">关于我们</a>
+						<ul>
+							<li><a href="about us.html">关于我们</a></li>
+							<li><a href="about us.html">加入我们</a></li>
+						</ul>
+					</li>
+					<li><a href="contribute.html">欢迎投稿</a></li>
+				</ul>
+			</div>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,245 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/* 导航条 */
+#nav{
+	width: 1200px;
+	height: 120px;
+	margin: 0 auto;
+}
+.logo{
+	width: 152px;
+	margin-left: 40px;
+	float: left;
+}
+.menu>ul{
+	width: 640px;
+	height: 120px;
+	float: left;
+	margin-left: 330px;
+}
+.menu>ul>li{
+	width: 128px;
+	float: left;
+	line-height: 120px;
+	text-align: center;
+}
+.menu>ul>li>a{
+	color: #000000;
+	font-size: 20px;
+}
+.menu>ul>li>a:hover{
+	color: #f1602c;
+	text-decoration: none;
+}
+/* 轮播图 */
+#slideshow{
+	width: 1200px;
+	height: 400px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.slide-img{
+	width: 6000px;
+	height: 400px;
+	position: absolute;
+}
+.slide-img img{
+	width: 1200px;
+	height: 400px;
+	float: left;
+}
+.dot{
+	width: 200px;
+	position: absolute;
+	bottom: 10px;
+	right: 50px;
+}
+.dot span{
+	width: 20px;
+	height: 20px;
+	background-color: #C0C0C0;
+	border-radius: 50%;
+	border: 2px #FFFFFF solid;
+	display: inline-block;
+	cursor:pointer;
+}
+.dot .on{
+	background-color: #FFFFFF;
+	border-color: #f1602c;
+}
+.slide-btn a{
+	width: 100px;
+	height: 400px;
+	line-height: 400px;
+	background-color: #CCCCCC;
+	opacity: 0.7;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 48px;
+	font-weight: 800;
+	position: absolute;
+}
+.slide-btn a:hover{
+	background-color: #7B7D80;
+}
+.btn-left{
+	left: 0;
+}
+.btn-right{
+	right: 0;
+}
+/* 左侧手风琴 */
+#case{
+	width: 1200px;
+	height: 450px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+#case-left{
+	width: 500px;
+	margin-left: 80px;
+	float: left;
+}
+#case-left h1{
+	margin-left: 5px;
+}
+.first{
+	margin-top: 30px;
+}
+#case-left div h3{
+	line-height: 50px;
+	color: #FFFFFF;
+	background-color: #666666;
+}
+#case-left div h3 span{
+	float: right;
+}
+#case-left div ul{
+	width: 500px;
+}
+#case-left div ul li{
+	line-height: 40px;
+	margin-bottom: 3px;
+	background-color: #CC9999;
+}
+/* 投稿内容 */
+#case-right{
+	width: 400px;
+	float: left;
+	margin-top: 100px;
+	margin-left: 100px;
+	background-color: #f5f5f4;
+}
+.myform{
+	margin: 50px;
+}
+.myform div{
+	line-height: 40px;
+}
+.myform span{
+	width: 100px;
+	font-size: 22px;
+	display: block;
+	float: left;
+}
+.myform input{
+	height: 30px;
+}
+#btn{
+	width: 150px;
+	height: 35px;
+}
+/* 评价网页 */
+#evaluate{
+	width: 1200px;
+	height: 500px;
+	margin: 0 auto;
+}
+#evaluate .eval-title{
+	text-align: center;
+	font-size: 30px;
+	font-weight: 800;
+}
+#evaluate p{
+	font-size: 20px;
+	color: #000000;
+}
+#evaluate .retract{
+	text-indent: 2em;
+	line-height: 40px;
+}
+#evaluate .eval-right1{
+	margin-left: 1130px;
+}
+#evaluate .eval-right2{
+	margin-left: 1060px;
+}
+#evaluate .eval-btn{
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 18px;
+	margin-left: 30px;
+	text-align: center;
+	border-radius: 5%;
+	background-color: #f36a5a;
+}
+#evaluate .eval-btn:hover{
+	background-color: #f1602c;
+}
+#evaluate .eval-btn a{
+	color: #FFFFFF;
+}
+#evaluate .eval-btn a:hover{
+	color: #FFFFFF;
+}
+/* 回到顶部 */
+#to-top .top{
+	position:fixed;
+	top:450px;
+	right:0px;
+	z-index: 3;
+}
+#to-top .top a img{
+	width:80px;
+	height:80px;
+}
+#to-top .top a:hover{
+	opacity: 0.6;
+}
+/* 页脚 */
+#footer{
+	width: 1200px;
+	height: 230px;
+	margin: 0 auto;
+	margin-top: 30px;
+	background-color: #1b1b1b;
+}
+.webtitle{
+	width: 235px;
+	height: 35px;
+	color: #f27507;
+	font-size: 22px;
+	margin: 0 auto;
+}
+#footer .mess{
+	width: 580px;
+	color: white;
+	font-size: 19px;
+	margin-left: 225px;
+}
+.left-img{
+	width: 140px;
+	float: left;
+}

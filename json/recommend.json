@@ -1,0 +1,16 @@
+{
+    "start": 0,
+    "recommend": [
+        {
+            "title": "新品推荐"
+        },
+        {
+            "img1": "image/recommend1.gif",
+            "img2": "image/recommend2.gif",
+            "img3": "image/recommend3.gif",
+            "img4": "image/recommend1.gif",
+            "img5": "image/recommend2.gif",
+            "img6": "image/recommend3.gif"
+        }
+    ]
+}

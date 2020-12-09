@@ -1,0 +1,196 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/* 导航条 */
+#nav{
+	width: 1200px;
+	height: 120px;
+	margin: 0 auto;
+	background-color: #fbfbfb;
+}
+.logo{
+	width: 152px;
+	margin-left: 40px;
+	float: left;
+}
+.menu>ul{
+	width: 640px;
+	height: 120px;
+	float: left;
+	margin-left: 330px;
+}
+.menu>ul>li{
+	width: 128px;
+	float: left;
+	line-height: 120px;
+	text-align: center;
+}
+.menu>ul>li>a{
+	color: #000000;
+	font-size: 20px;
+}
+.menu>ul>li>a:hover{
+	color: #f1602c;
+	text-decoration: none;
+}
+/* 巨幕 */
+#wel{
+	width: 100%;
+	height: 800px;
+	margin: 0 auto;
+	background-image: url(../image/aboutus-bac.gif);
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.8;
+}
+.wel-word{
+	width: 250px;
+	padding-top: 300px;
+	margin: 0 auto;
+	color: #FFFFFF;
+	font-weight: 900;
+	font-size: 52px;
+}
+#wel .wel-btn{
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 auto;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 10px;
+	background-color: #E38D13;
+}
+#wel .wel-btn:hover{
+	background-color: #f1602c;
+}
+#wel .wel-btn a{
+	color: #FFFFFF;
+}
+#wel .wel-btn a:hover{
+	color: #FFFFFF;
+}
+/* 关于我们 */
+#about{
+	width: 1200px;
+	height: 550px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	padding-top: 30px;
+}
+.our{
+	font-size: 42px;
+}
+.word-ti{
+	font-size: 18px;
+	color: #000000;
+}
+.about-word{
+	width: 500px;
+	margin-top: 30px;
+	float: left;
+}
+.about-word p{
+	font-size: 18px;
+}
+.about-img1{
+	float: left;
+}
+.about-img1 img{
+	width: 320px;
+	height: 450px;
+	margin-top: 50px;
+	margin-left: 50px;
+}
+.about-img2{
+	width: 280px;
+	margin-left: 50px;
+	float: left;
+}
+.img2-top{
+	margin-top: 20px;
+	margin-bottom: 60px;
+}
+.about-img2 img{
+	width: 280px;
+}
+/* 加入我们 */
+#join{
+	width: 1200px;
+	height: 600px;
+	margin: 0 auto;
+}
+.join-img{
+	float: left;
+}
+.join-img img{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 30px;
+}
+.join-word{
+	width: 650px;
+	margin-top: 150px;
+	margin-left: 50px;
+	padding: 30px;
+	float: left;
+}
+.join-word h1{
+	font-weight: 900;
+	margin-left: 150px;
+}
+.join-word p{
+	font-size: 22px;
+	color: #000000;
+	line-height: 50px;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+.join-word span{
+	color: #F15F2A;
+}
+/* 回到顶部 */
+#to-top .top{
+	position:fixed;
+	top:450px;
+	right:0px;
+	z-index: 3;
+}
+#to-top .top a img{
+	width:80px;
+	height:80px;
+}
+#to-top .top a:hover{
+	opacity: 0.6;
+}
+/* 页脚 */
+#footer{
+	width: 1200px;
+	height: 230px;
+	margin: 0 auto;
+	background-color: #1b1b1b;
+}
+.webtitle{
+	width: 235px;
+	height: 35px;
+	color: #f27507;
+	font-size: 22px;
+	margin: 0 auto;
+}
+#footer .mess{
+	width: 580px;
+	color: white;
+	font-size: 19px;
+	margin-left: 225px;
+}
+.left-img{
+	width: 140px;
+	float: left;
+}

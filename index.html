@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<script src="jquery-3.4.1.js"></script>
+	<script src="js/index.js"></script>
+	<body>
+		<div id="index">
+			<div id="nav">
+				<div class="logo">
+					<img src="image/logo.gif">
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href="index.html">首页</a></li>
+						<li><a href="list.html">觅食菜单</a></li>
+						<li><a href="team.html">我们的团队</a></li>
+						<li><a href="about us.html">关于我们</a></li>
+						<li><a href="contribute.html">欢迎投稿</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div id="slideshow">
+				<div class="slide-img">
+					<!-- <img src="image/slideshow1.gif">
+					<img src="image/slideshow2.gif">
+					<img src="image/slideshow3.gif">
+					<img src="image/slideshow4.gif">
+					<img src="image/slideshow5.gif"> -->
+				</div>
+				<div class="dot">
+					<span index="1" class="on"></span>
+					<span index="2"></span>
+					<span index="3"></span>
+					<span index="4"></span>
+					<span index="5"></span>
+				</div>
+				<div class="slide-btn">
+					<a href="#" class="btn-left slide-btn1"><</a>
+					<a href="#" class="btn-right slide-btn1">></a>
+				</div>
+			</div>
+			<script src="jquery-3.4.1.js"></script>
+			<script>
+				var imgcount=5
+				var index=1
+				var time
+				var but=$(".dot")[0].children
+				autoNextPage()
+				function autoNextPage(){
+					time=setInterval(function(){
+						nextPage(true)
+					},3000)
+				}
+				$("#slideshow").mouseover(function(){
+					clearInterval(time)
+				})
+				$("#slideshow").mouseout(function(){
+					autoNextPage()
+				})
+				$(".btn-left").click(function(){
+					nextPage(false)
+				})
+				$(".btn-right").click(function(){
+					nextPage(true)
+				})
+				clickButtons()
+				function clickButtons(){
+					var length=but.length
+					for(var i=0;i<length;i++){
+						but[i].onclick=function(){
+							$(but[index-1]).removeClass("on")
+							if($(this).attr("index")==1){
+								index=5
+							}else{
+								index=$(this).attr("index")-1
+							}
+							nextPage(true)
+						}
+					}
+				}
+				function nextPage(next){
+					var targetLeft=0
+					$(but[index-1]).removeClass("on")
+					if(next){
+						if(index==5){
+							targetLeft=0
+							index=1
+						}else{
+							index++
+							targetLeft=-1200*(index-1)
+						}
+					}else{
+						if(index==1){
+							index=5
+							targetLeft=-1200*(imgcount-1)
+						}else{
+							index--
+							targetLeft=-1200*(index-1)
+						}
+					}
+					$(".slide-img").animate({left:targetLeft+'px'})
+					$(but[index-1]).addClass("on")
+				}
+			</script>
+			
+			<div id="recommend">
+				<p>新品推荐</p>
+				<div class="recommend1">
+					<img src="image/recommend1.gif">
+				</div>
+				<div class="recommend2">
+					<img src="image/recommend2.gif">
+				</div>
+				<div class="recommend3">
+					<img src="image/recommend3.gif">
+				</div>
+				<div class="recommend4">
+					<img src="image/recommend4.gif">
+				</div>
+				<div class="recommend5">
+					<img src="image/recommend5.gif">
+				</div>
+				<div class="recommend6">
+					<img src="image/recommend6.gif">
+				</div>
+			</div>
+				
+			<div id="photo">
+				<span></span>
+				<p class="ti"><b><img src="image/bor.gif">星级美食达人教摆盘：从此拍出高逼格美食照片！</b></p>
+				<div class="tab">
+					<ul>
+						<li class="active">Nick</li>
+						<li>Hwang</li>
+						<li>Sharon</li>
+						<li>Juliette</li>
+					</ul>
+				</div>
+				<div class="intro">
+					<div class="first select">
+						<br/>
+						<p><b>Nick 是一位泰国小哥，素食主义者。他是一名在家自学成才的厨子。噢不，他还说，「我不是厨子，我只是有激情」。没事就爱在家折腾食物，比如把红萝卜切成几乎透明的一片片，每片上面摆一颗鱼子酱或者一朵野花；比如把希腊奶酪和印度无花果摆在一起，碾碎杏仁，泼墨一样撒上两笔蓝莓酱。</b></p>
+						<img src="image/photo1.gif">
+						<img src="image/photo2.gif">
+						<img src="image/photo3.gif">
+					</div>
+					<div class="second">
+						<br/>
+						<p><b>Hwang，看名字像是美籍华人，她的网站 （www.mycookingdiary.com）设计非常简单，只有一张大大的图片，往右可以看下一张，点击图片可以查看食谱。和 Nick的作品比起来，Sharon的食物更偏家常。Sharon 都是用大碗，大份的沙拉、石锅饭、罗宋汤或者面食。但这丝毫不影响 Sharon 照片的美感。</b></p>
+						<img src="image/photo2.gif">
+						<img src="image/photo3.gif">
+						<img src="image/photo1.gif">
+					</div>
+					<div class="third">
+						<br/>
+						<p><b>Sharon 的照片大多是纯色的背景（而且每张不一样），碗放在正中间，从上往下俯拍。平时拍照尽量让食物出现在镜头中心，但一直很好奇碗这么大，图片两边留白还这么多，这是怎么拍出来的？感觉……要么是放在地上，要么是站在梯子上拍的吧……</b></p>
+						<img src="image/photo3.gif">
+						<img src="image/photo1.gif">
+						<img src="image/photo2.gif">
+					</div>
+					<div class="fourth">
+						<br/>
+						<p><b>还有一位美食达人Juliette，22岁的大学生，生活在澳大利亚。Juliette 是一个特别会生活的人。她照片里的食物通常只是简单的早餐、沙拉或者糕点，但图片里会出现比如修剪花草的剪刀，刚刚买回来的迷迭香，插在酒瓶里的鲜花儿，还有正在读的书，每一张照片都透露着「美好生活」的气息。</b></p>
+						<img src="image/photo3.gif">
+						<img src="image/photo2.gif">
+						<img src="image/photo1.gif">
+					</div>
+				</div>
+			</div>
+			
+			<div id="to-top">
+				<ul class="top">
+					<a href="#">
+						<img src="image/top.png">
+					</a>
+				</ul>
+			</div>
+			
+			<div id="footer">
+				<br/>
+				<br/>
+				<div class="left-img">
+					<img src="image/foot-left.gif">
+				</div>
+				<p class="webtitle"><b>吃食网 — 让吃更美！</b></p>
+				<p class="mess">关于我们 - 联系我们 - 加入我们 - 免责声明 - 我要投稿 - 访客留言</p>
+				<p class="mess">本站提供热销新品、菜品摆盘，别忘了告诉您的朋友哟 ^_^</p>
+				<p class="mess">版权所有 &copy; 2004-2020 吃食网 保留所有权利</p>
+			</div>
+		</div>
+	</body>
+</html>
